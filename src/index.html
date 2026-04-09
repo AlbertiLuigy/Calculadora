@@ -43,6 +43,17 @@
         box-shadow: 1px 1px 1px #000;
       }
 
+      .cientifica {
+        display: none;
+      }
+
+      .btn-toggle {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+        padding: 5px;
+      }
+
     </style>
 	</head>
 
@@ -54,8 +65,24 @@
           <br />
 
           <div class="calculadora">
+            <button type="button" onclick="alternarCientifica()" class="btn btn-info btn-toggle">Modo Científico</button>
             <input type="text" id="campo" class="form-control resultado" placeholder="0" disabled="disabled" />
             
+            <div id="cientifica" class="cientifica">
+              <div class="row">
+                <button type="button" onclick="calcular('acao', 'sin')" class="btn btn-dark btn-lg font-weight-light">sin</button>
+                <button type="button" onclick="calcular('acao', 'cos')" class="btn btn-dark btn-lg font-weight-light">cos</button>
+                <button type="button" onclick="calcular('acao', 'tan')" class="btn btn-dark btn-lg font-weight-light">tan</button>
+                <button type="button" onclick="calcular('acao', 'log')" class="btn btn-dark btn-lg font-weight-light">log</button>
+              </div>
+              <div class="row">
+                <button type="button" onclick="calcular('acao', 'sqrt')" class="btn btn-dark btn-lg font-weight-light">√</button>
+                <button type="button" onclick="calcular('acao', 'pow')" class="btn btn-dark btn-lg font-weight-light">x²</button>
+                <button type="button" onclick="calcular('valor', '3.1415')" class="btn btn-dark btn-lg font-weight-light">π</button>
+                <button type="button" onclick="calcular('valor', '2.7182')" class="btn btn-dark btn-lg font-weight-light">e</button>
+              </div>
+            </div>
+
             <div class="row">
               <button type="button" onclick="calcular('acao', 'c')" class="btn btn-dark btn-lg clear font-weight-light">C</button>
               <button type="button" onclick="calcular('acao', '/')" class="btn btn-dark btn-lg font-weight-light">/</button>
